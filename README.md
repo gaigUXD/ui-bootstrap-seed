@@ -117,7 +117,7 @@ to `http://localhost:9000` to see the seed project application.
 
 *Note*: The gulp task will remain running and will watch your source files for changes. If a change
 is detected, gulp will automatically re-run the necessary build tasks and reload your browser
-window. To stop gulp at any time, press `ctrl + c` inside the command prompt or terminal window with
+window. To stop gulp at any time, press `ctrl+c` inside the command prompt or terminal window with
 the running gulp process.
 
 ## Troubleshooting
