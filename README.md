@@ -1,6 +1,6 @@
 # GAIG uiBootstrap Seed Project
 
-Starting client for applications using GAIG uiBootstrap
+Client template for applications using GAIG uiBootstrap
 
 ### Table of Contents
 1. [Getting Started](#user-content-getting-started)
@@ -115,10 +115,10 @@ process will create a `build` folder in the root of your source folder that will
 project's compiled HTML, CSS, JavaScript, and image assets. In your browser, you can now navigate
 to `http://localhost:9000` to see the seed project application.
 
-*Note*: The gulp task will remain running and watches your source files for changes. If a change is
-detected, gulp will automatically re-run the necessary build scripts and reload your browser window.
-To stop gulp at any time, press `ctrl + c` inside the command prompt or terminal window with the
-running gulp process.
+*Note*: The gulp task will remain running and will watch your source files for changes. If a change
+is detected, gulp will automatically re-run the necessary build scripts and reload your browser
+window. To stop gulp at any time, press `ctrl + c` inside the command prompt or terminal window with
+the running gulp process.
 
 ## Troubleshooting
 
