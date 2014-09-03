@@ -1,0 +1,20 @@
+{
+  "name": "baldion-seed",
+  "version": "0.0.0",
+  "homepage": "https://github.com/dkrotts/baldion-seed",
+  "authors": [
+    "Dustin Krotts <dustin.krotts@gmail.com>"
+  ],
+  "description": "Client seed for AngularJs applications",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "ui-router": "~0.2.11"
+  }
+}
