@@ -15,7 +15,7 @@ Client template for applications using GAIG uiBootstrap
 ## Getting Started
 
 Before you begin, there are a few dependencies you must install. To install these dependencies,
-you must hav administrator access on your machine.
+you must have administrator access on your machine.
 
 ### Install nodejs
 Node allows you to run Javascript on the server. To install, navigate to
