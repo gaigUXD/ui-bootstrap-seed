@@ -65,8 +65,10 @@ config.replacements = [
   {
     pattern: /<!-- inject:uiBootstrapJS -->/g,
     replacement: '<script src="' + pkg.gaigCDN + '/' + pkg.uiBootstrapVersion
-      + '/js/lib/jquery/jquery-2.1.1.min.js"></script>\n<script src="' + pkg.gaigCDN + '/' + pkg.uiBootstrapVersion
-      + '/js/lib/angular/angular.min.js"></script>\n<script src="' + pkg.gaigCDN + '/' + pkg.uiBootstrapVersion
+      + '/js/lib/jquery/jquery-2.1.1.min.js"></script>\n'
+      + '<script src="' + pkg.gaigCDN + '/' + pkg.uiBootstrapVersion
+      + '/js/lib/angular/angular.min.js"></script>\n'
+      + '<script src="' + pkg.gaigCDN + '/' + pkg.uiBootstrapVersion
       + '/js/gaig-ui-bootstrap.js"></script>'
   }
 ];
@@ -75,8 +77,7 @@ config.replacements = [
  * An array of source files to push to ./dist/js/vendor
  */
 config.vendor = [
-    config.paths.src.vendor + '/angular-route/angular-route.js',
-    config.paths.src.vendor + '/ui-router/release/angular-ui-router.js'
+    config.paths.src.vendor + '/ui-router/release/angular-ui-router.min.js'
 ];
 
 /**

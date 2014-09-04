@@ -5,6 +5,7 @@ module.exports = function HomeCtrl() {
 
   console.log('asdf');
 
+
   (function init() {
     vm.model = {
       welcomeMsg: 'Welcome'

@@ -15,12 +15,12 @@ gulp.task('vendor', function () {
   if (src.length > 0) {
     return gulp.src(src)
       .pipe(flatten())
-      .pipe(sourcemaps.init())
-      .pipe(uglify())
-      .pipe(rename(function(path) {
-        path.basename = path.basename + '.min';
-      }))
-      .pipe(sourcemaps.write('./'))
+//      .pipe(sourcemaps.init())
+//      .pipe(uglify())
+//      .pipe(rename(function(path) {
+//        path.basename = path.basename + '.min';
+//      }))
+//      .pipe(sourcemaps.write('./'))
       .pipe(gulp.dest(dest));
   } else {
     return;
