@@ -1,8 +1,8 @@
 {
   "name": "ui-bootstrap-seed",
   "version": "0.1.0",
-  "uiBootstrapCDN": "//cdn.gaic.com/cdn/ui-bootstrap",
-  "uiBootstrapVersion": "0.45.0-SNAPSHOT",
+  "gaigCDN": "//cdn.gaic.com/cdn/ui-bootstrap",
+  "uiBootstrapVersion": "0.48.0-SNAPSHOT",
   "description": "Client seed for GAIG uiBootstrap AngularJs applications",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
