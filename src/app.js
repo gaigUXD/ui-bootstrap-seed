@@ -10,12 +10,12 @@ angular
   .module('${app}', [
     'gaigUiBootstrap',
     'ngRoute',
-    require('./modules/common').name,
-    require('./modules/header').name,
-    require('./modules/footer').name,
-    require('./modules/404').name,
-    require('./modules/home').name,
-    require('./modules/example').name
+    require('./modules/common/common').name,
+    require('./modules/header/header').name,
+    require('./modules/footer/footer').name,
+    require('./modules/404/404').name,
+    require('./modules/home/home').name,
+    require('./modules/example/example').name
   ])
 
 /**

@@ -1,11 +1,11 @@
 {
-  "name": "baldion-seed",
+  "name": "ui-bootstrap-seed",
   "version": "0.0.0",
-  "homepage": "https://github.com/dkrotts/baldion-seed",
+  "homepage": "",
   "authors": [
     "Dustin Krotts <dustin.krotts@gmail.com>"
   ],
-  "description": "Client seed for AngularJs applications",
+  "description": "Client seed for GAIG uiBootstrap AngularJs applications",
   "license": "MIT",
   "ignore": [
     "**/.*",
