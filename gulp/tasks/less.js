@@ -20,6 +20,7 @@ gulp.task('less', function () {
     }))
     .on('error', function(err) {
       gutil.log(gutil.colors.red('Less error:'), err);
+      this.emit('end');
     })
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest(dest));
