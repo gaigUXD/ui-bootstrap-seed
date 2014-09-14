@@ -14,9 +14,9 @@ config.app = 'gaigApp';
  */
 config.paths = {
   src: {
-    root: './src',
-    common: './src/common',
-    modules: './src/modules',
+    root: './app',
+    common: './app/common',
+    modules: './app/modules',
     vendor: './bower_components'
   },
 
