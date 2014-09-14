@@ -1,12 +1,7 @@
 {
   "name": "ui-bootstrap-seed",
   "version": "0.0.0",
-  "homepage": "",
-  "authors": [
-    "Dustin Krotts <dustin.krotts@gmail.com>"
-  ],
   "description": "Client seed for GAIG uiBootstrap AngularJs applications",
-  "license": "MIT",
   "ignore": [
     "**/.*",
     "node_modules",
