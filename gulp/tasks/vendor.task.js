@@ -6,7 +6,7 @@ var flatten = require('gulp-flatten');
 var uglify = require('gulp-uglify');
 var sourcemaps = require('gulp-sourcemaps');
 var rename = require('gulp-rename');
-var config = require('../config');
+var config = require('../gulp-config');
 
 gulp.task('vendor', function () {
   var src = config.vendor;

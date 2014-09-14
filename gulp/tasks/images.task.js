@@ -3,7 +3,7 @@
  */
 var gulp = require('gulp');
 var flatten = require('gulp-flatten');
-var config = require('../config');
+var config = require('../gulp-config');
 
 gulp.task('images', function () {
   var src = [

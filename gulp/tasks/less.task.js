@@ -6,7 +6,7 @@ var frep = require('gulp-frep');
 var less = require('gulp-less');
 var gutil = require('gulp-util');
 var sourcemaps = require('gulp-sourcemaps');
-var config = require('../config');
+var config = require('../gulp-config');
 
 gulp.task('less', function () {
   var src = config.paths.src.root + '/styles.less';

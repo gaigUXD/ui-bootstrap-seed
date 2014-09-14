@@ -11,7 +11,7 @@ var source = require('vinyl-source-stream');
 var uglify = require('gulp-uglify');
 var sourcemaps = require('gulp-sourcemaps');
 var buffer = require('vinyl-buffer');
-var config = require('../config');
+var config = require('../gulp-config');
 
 gulp.task('watchify', function () {
   var src = config.paths.src.root + '/app.js';

@@ -2,7 +2,7 @@
  * Watches src files for changes and runs associated tasks
  */
 var gulp = require('gulp');
-var config = require('../config');
+var config = require('../gulp-config');
 
 gulp.task('watch', function() {
   var indexSrc = config.paths.src.root + '/index.html';

@@ -4,7 +4,7 @@
 var gulp = require('gulp');
 var frep = require('gulp-frep');
 var gutil = require('gulp-util');
-var config = require('../config');
+var config = require('../gulp-config');
 
 gulp.task('index', function() {
   var src = config.paths.src.root + '/index.html';

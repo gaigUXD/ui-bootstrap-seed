@@ -5,7 +5,7 @@ var gulp = require('gulp');
 var frep = require('gulp-frep');
 var flatten = require('gulp-flatten');
 var rename = require('gulp-rename');
-var config = require('../config');
+var config = require('../gulp-config');
 
 gulp.task('templates', function() {
   var src = config.paths.src.root + '/**/*.tpl';

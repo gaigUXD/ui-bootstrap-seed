@@ -3,7 +3,7 @@
  */
 var gulp = require('gulp');
 var webserver = require('gulp-webserver');
-var config = require('../config');
+var config = require('../gulp-config');
 
 gulp.task('webserver', function() {
   var src = config.paths.dist.root;
