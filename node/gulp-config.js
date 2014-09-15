@@ -13,6 +13,8 @@ config.app = 'gaigApp';
  * Define build src and dist paths
  */
 config.paths = {
+  node: './node',
+
   src: {
     root: './app',
     common: './app/common',

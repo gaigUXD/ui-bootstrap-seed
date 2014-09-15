@@ -4,6 +4,10 @@
   "version": "0.1.0",
   "gaigCDN": "//cdn.gaic.com/cdn/ui-bootstrap",
   "uiBootstrapVersion": "0.48.0-SNAPSHOT",
+  "preferGlobal": "true",
+  "bin": {
+    "gaig": "node/cli/cli.js"
+  },
   "devDependencies": {
     "gulp": "~3.8.7",
     "gulp-less": "~1.3.5",

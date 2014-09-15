@@ -3,7 +3,7 @@
  */
 var fs = require('fs');
 var scriptFilter = require('./util/script-filter');
-var tasks = fs.readdirSync('./gulp/tasks').filter(scriptFilter);
+var tasks = fs.readdirSync('./node/tasks').filter(scriptFilter);
 
 tasks.forEach(function(task) {
     require('./tasks/' + task);
