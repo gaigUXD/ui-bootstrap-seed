@@ -2,19 +2,22 @@
 
 var fs = require('fs');
 var ensureExists = require('../../util/ensure-exists');
+var caseUtil = require('../../util/case-util');
 var newFileFromScaffold = require('./new-file-from-scaffold');
 var constants = require('./cli-constants');
 var reporter = require('./cli-reporter');
 var config = require('../../gulp-config');
 
-module.exports = function newModule(moduleName) {
-  // Directories
-  var modulePath = config.paths.src.modules + '/' + moduleName;
+module.exports = function newModule(params, flags) {
+  var moduleName = caseUtil.toCamelCase(params.shift());
+  console.log("module name", moduleName);
+  var modulePath = config.paths.src.modules + '/' + caseUtil.toDashCase(moduleName);
   var controllersPath = modulePath + '/controllers';
   var imagesPath = modulePath + '/images';
   var lessPath = modulePath + '/less';
   var servicesPath = modulePath + '/services';
   var templatesPath = modulePath + '/templates';
+  var generateRoute = (flags.indexOf(constants.flags.generateRoute) > -1) ? true : false;
   var replacements = [
     {
       pattern: /\$\{moduleName\}/g,
@@ -22,24 +25,38 @@ module.exports = function newModule(moduleName) {
     },
     {
       pattern: /\$\{controllerName\}/g,
-      replacement: moduleName + 'Ctrl'
+      replacement: caseUtil.capitalize(moduleName) + 'Ctrl'
     },
     {
       pattern: /\$\{controllerFile\}/g,
-      replacement: moduleName + '.controller'
+      replacement: caseUtil.toDashCase(moduleName) + '.controller'
+    },
+    {
+      pattern: /\$\{moduleTitleCase\}/g,
+      replacement: caseUtil.toTitleCase(caseUtil.toSpaceCase(moduleName))
+    },
+    {
+      pattern: /\$\{moduleDashCase\}/g,
+      replacement: caseUtil.toDashCase(moduleName)
     }
   ];
 
-  // Go
   ensureExists(modulePath, function(err) {
     if (err === constants.folderExists) {
       reporter.warn('module `' + modulePath + '` already exists. Aborting...');
     } else {
-      reporter.anon('New module `' + modulePath + '` created');
 
-      newFileFromScaffold(modulePath, moduleName + '.js', 'module.scaffold', replacements);
+      if (generateRoute) {
+        newFileFromScaffold(modulePath, moduleName + '.js', 'module-with-route.scaffold', replacements);
+        newFileFromScaffold(templatesPath, moduleName + '.tpl', 'template.scaffold', replacements);
+      } else {
+        newFileFromScaffold(modulePath, moduleName + '.js', 'module.scaffold', replacements);
+      }
+
       newFileFromScaffold(controllersPath, moduleName + '.controller.js', 'controller.scaffold',
         replacements);
+
+      reporter.anon('New module `' + modulePath + '` created.');
     }
 
     ensureExists(controllersPath, function(err) {

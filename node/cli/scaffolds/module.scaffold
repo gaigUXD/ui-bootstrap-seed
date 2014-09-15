@@ -2,4 +2,8 @@
 
 module.exports = angular.module('${moduleName}', [])
 
-  .controller('${controllerName}', require('./controllers/${controllerFile}'));
+  .controller('${controllerName}', require('./controllers/${controllerFile}'))
+
+  .config(function ${moduleName}Config() {
+
+  });

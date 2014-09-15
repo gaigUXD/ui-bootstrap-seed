@@ -1,5 +1,8 @@
 'use strict';
 
 module.exports = {
-  folderExists: 'folderExists'
+  folderExists: 'folderExists',
+  flags: {
+    generateRoute: '--route'
+  }
 };

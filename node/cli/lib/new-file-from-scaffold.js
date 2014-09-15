@@ -1,6 +1,7 @@
 'use strict';
 
 var fs = require('fs');
+var caseUtil = require('../../util/case-util');
 var constants = require('./cli-constants');
 var reporter = require('./cli-reporter');
 var config = require('../../gulp-config');
@@ -10,13 +11,19 @@ module.exports = function newFile(path, name, scaffold, replacements) {
   var replacementsLength;
   var scaffoldPath = config.paths.node + '/cli/scaffolds/' + scaffold;
 
-  fs.readFile(scaffoldPath, 'utf8', function(err, scaffoldContents) {
-    if (replacements) {
-      replacementsLength = replacements.length;
+  name = caseUtil.toDashCase(name);
 
-      for (i = 0; i < replacementsLength; i++) {
-        scaffoldContents = scaffoldContents.replace(replacements[i].pattern,
-          replacements[i].replacement);
+  fs.readFile(scaffoldPath, 'utf8', function(err, scaffoldContents) {
+    if (err) {
+      reporter.error(err);
+    } else {
+      if (replacements) {
+        replacementsLength = replacements.length;
+
+        for (i = 0; i < replacementsLength; i++) {
+          scaffoldContents = scaffoldContents.replace(replacements[i].pattern,
+            replacements[i].replacement);
+        }
       }
     }
 

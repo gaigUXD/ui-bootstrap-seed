@@ -5,6 +5,8 @@ function ${controllerName}() {
 
   (function init() {
 
+    vm.hello = 'Hello from ${moduleTitleCase}';
+
   })();
 
 }
