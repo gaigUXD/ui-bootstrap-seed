@@ -10,12 +10,25 @@ var config = require('../../gulp-config');
 module.exports = function newModule(moduleName) {
   // Directories
   var modulePath = config.paths.src.modules + '/' + moduleName;
-  var moduleFile = modulePath + '/' + moduleName + '.js';
   var controllersPath = modulePath + '/controllers';
   var imagesPath = modulePath + '/images';
   var lessPath = modulePath + '/less';
   var servicesPath = modulePath + '/services';
   var templatesPath = modulePath + '/templates';
+  var replacements = [
+    {
+      pattern: /\$\{moduleName\}/g,
+      replacement: moduleName
+    },
+    {
+      pattern: /\$\{controllerName\}/g,
+      replacement: moduleName + 'Ctrl'
+    },
+    {
+      pattern: /\$\{controllerFile\}/g,
+      replacement: moduleName + '.controller'
+    }
+  ];
 
   // Go
   ensureExists(modulePath, function(err) {
@@ -24,12 +37,9 @@ module.exports = function newModule(moduleName) {
     } else {
       reporter.anon('New module `' + modulePath + '` created');
 
-      newFileFromScaffold(modulePath, moduleName + '.js', 'module.scaffold', [
-        {
-          pattern: /\$\{moduleName\}/g,
-          replacement: moduleName
-        }
-      ]);
+      newFileFromScaffold(modulePath, moduleName + '.js', 'module.scaffold', replacements);
+      newFileFromScaffold(controllersPath, moduleName + '.controller.js', 'controller.scaffold',
+        replacements);
     }
 
     ensureExists(controllersPath, function(err) {
