@@ -14,9 +14,7 @@ angular
     require('./modules/header/header').name,
     require('./modules/footer/footer').name,
     require('./modules/404/404').name,
-    require('./modules/home/home').name,
-    require('./modules/example/example').name,
-    require('./modules/about-us-frank/about-us-frank').name
+    require('./modules/home/home').name
   ])
 
 /**
