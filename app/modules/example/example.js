@@ -1,6 +1,6 @@
 'use strict';
 
-module.exports = angular.module('${app}.example', [])
+module.exports = angular.module('example', [])
 
   .controller('ExampleCtrl', require('./controllers/example.controller.js'))
 

@@ -24,7 +24,7 @@ module.exports = function newModule(moduleName) {
     } else {
       reporter.anon('New module `' + modulePath + '` created');
 
-      newFileFromScaffold(modulePath, moduleName + '.js', 'module-index.js', [
+      newFileFromScaffold(modulePath, moduleName + '.js', 'module.scaffold', [
         {
           pattern: /\$\{moduleName\}/g,
           replacement: moduleName

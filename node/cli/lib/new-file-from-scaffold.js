@@ -8,7 +8,7 @@ var config = require('../../gulp-config');
 module.exports = function newFile(path, name, scaffold, replacements) {
   var i;
   var replacementsLength;
-  var scaffoldPath = config.paths.node + '/cli/scaffolds/' + scaffold;
+  var scaffoldPath = config.paths.node + '/cli/scaffolds/' + scaffold + '.js';
 
   fs.readFile(scaffoldPath, 'utf8', function(err, scaffoldContents) {
     if (replacements) {

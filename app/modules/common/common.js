@@ -1,6 +1,6 @@
 'use strict';
 
-module.exports = angular.module('${app}.common', [])
+module.exports = angular.module('common', [])
 
   .controller('GlobalCtrl', require('./controllers/global.controller.js'))
   .controller('NavhelperCtrl', require('./controllers/navhelper.controller.js'))

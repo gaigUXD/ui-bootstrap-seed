@@ -1,3 +1,3 @@
 'use strict';
 
-module.exports = angular.module('${app}.footer', []);
+module.exports = angular.module('footer', []);

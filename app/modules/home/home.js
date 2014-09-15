@@ -1,6 +1,6 @@
 'use strict';
 
-module.exports = angular.module('${app}.home', [])
+module.exports = angular.module('home', [])
 
   .controller('HomeCtrl', require('./controllers/home.controller'))
 

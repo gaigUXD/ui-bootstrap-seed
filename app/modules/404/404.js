@@ -1,6 +1,6 @@
 'use strict';
 
-module.exports = angular.module('${app}.notFound', [])
+module.exports = angular.module('notFound', [])
 
   .config(function notFoundConfig($routeProvider) {
 

@@ -1,3 +1,3 @@
 'use strict';
 
-module.exports = angular.module('${app}.header', []);
+module.exports = angular.module('header', []);

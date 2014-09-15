@@ -7,7 +7,7 @@ angular
  *
  * All child modules must be included here
  */
-  .module('${app}', [
+  .module('gaigApp', [
     'gaigUiBootstrap',
     'ngRoute',
     require('./modules/common/common').name,

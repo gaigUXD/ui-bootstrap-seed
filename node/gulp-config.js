@@ -5,11 +5,6 @@ var pkg = require('../package.json');
 var config = {};
 
 /**
- * Main module name
- */
-config.app = 'gaigApp';
-
-/**
  * Define build src and dist paths
  */
 config.paths = {
@@ -43,10 +38,6 @@ config.webserver = {
  * Define replacement patterns
  */
 config.replacements = [
-  {
-    pattern: /\$\{app\}/g,
-    replacement: config.app
-  },
   {
     pattern: /\$\{appVersion\}/g,
     replacement: pkg.version
