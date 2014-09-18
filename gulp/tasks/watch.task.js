@@ -13,7 +13,8 @@ gulp.task('watch', function() {
       config.paths.src.root + '/**/*.jpg',
       config.paths.src.root + '/**/*.jpeg',
       config.paths.src.root + '/**/*.gif',
-      config.paths.src.root + '/**/*.svg'
+      config.paths.src.root + '/**/*.svg',
+      config.paths.src.root + '/**/*.ico'
   ];
   var vendorSrc = (config.vendor) ? config.vendor : [];
 

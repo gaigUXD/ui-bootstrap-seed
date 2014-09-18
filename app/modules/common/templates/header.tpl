@@ -5,8 +5,8 @@
         <ul class="nav">
 
           <li>
-            <a href="#/example">
-              Example Page
+            <a href="#/home">
+              Home
             </a>
           </li>
 
@@ -28,20 +28,6 @@
         </ul>
       </div>
       <div class="pull-right">
-        <ul class="nav">
-          <li class="dropdown" gaig-dropdown>
-            <a href="#" class="dropdown-toggle">
-              <span class="gaig-icon gaig-icon-user"></span> Username
-              <b class="caret"></b>
-            </a>
-
-            <ul class="dropdown-menu dropdown-menu-alt">
-              <li>
-                <a href="#/logout">Logout</a>
-              </li>
-            </ul>
-          </li>
-        </ul>
 
         <a href="#/" class="brand brand-extended">
           Application Name

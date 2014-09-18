@@ -11,7 +11,7 @@ module.exports = angular.module('home', [])
         controller: 'HomeCtrl',
         controllerAs: 'home',
         templateUrl: 'templates/home.html',
-        pageTitle: 'Welcome'
+        pageTitle: 'Home'
       });
 
   });
