@@ -18,7 +18,8 @@ module.exports = function GlobalCtrl($scope, $rootScope, $route, $templateCache,
       isLoading: true
     };
 
-    //navhelperService.registerObserver(updatePageTitle, $scope);
+//    handleRouteChangeSuccess();
+
     $rootScope.$on('$routeChangeStart', handleRouteChangeStart);
     $rootScope.$on('$routeChangeSuccess', handleRouteChangeSuccess);
   })();
