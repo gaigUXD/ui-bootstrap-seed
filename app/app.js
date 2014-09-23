@@ -11,8 +11,7 @@ angular
     'ngRoute',
     'gaigUiBootstrap',
     require('./modules/common/common').name,
-    require('./modules/home/home').name,
-    require('./modules/foo/foo').name
+    require('./modules/home/home').name
   ])
 
 /**
